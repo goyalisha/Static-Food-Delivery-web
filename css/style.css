@@ -1,0 +1,247 @@
+/* CSS Reset */
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+/* :root{
+    --navbar-height: 59px;
+} */
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Navigation Bar Logo and Image */
+#logo{
+    margin: 10px 40px;
+}
+
+#logo img{
+    height: 56px;
+    margin: 2px 5px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+/* Navigation Bar List Itmes Styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* Home */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 200px;
+    height: 240px;
+    justify-content: center; /*Vertically*/
+    align-items: center; /*Horizontally*/
+}
+
+#home::before{
+    content: "";
+    background: url('../bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 56%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#home h1{
+    color: rgb(5, 49, 5);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color: rgb(5, 49, 5);
+    text-align: center;
+    font-size: 1.2rem; /*Relative to html(root) element*/
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+#services{
+    margin: 10px 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid rgb(5, 49, 5);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #fff7e9;
+}
+
+#services .box img{
+    height: 200px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+    color: rgb(5, 49, 5);
+}
+
+#client-section{
+    margin-top: 40px;
+    position: relative; /* It will only take height according to content inside it*/
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg2.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 125px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: 40px;
+}
+
+#contact::before{
+    content: "";
+    background: url(../contact.jpg) no-repeat center  center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    color: rgb(5, 49, 5)
+}
+
+#contact-box form{
+    width: 50%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    color: rgb(5, 49, 5);
+    font-family: 'Bree Serif', serif;
+}
+
+footer{
+    background-color: rgb(43, 43, 43);
+    color: white;
+    padding: 15px 25px;
+}
+
+/* Utility Classes -- Used Throughout the Page*/ 
+.h-primary{
+    font-size: 2.7rem;
+    padding: 0 12px;
+    font-family: 'Bree Serif', serif;
+    color: rgb(5, 49, 5);
+}
+
+.h-secondary{
+    font-size: 2.0rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+    color: rgb(5, 49, 5);
+}
+
+.h-tertiary{
+    font-size: 1.4rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+    color: rgb(5, 49, 5);
+}
+
+.btn{
+    padding: 6px 20px;
+    margin: 24px;
+    background-color: rgb(181, 208, 181);
+    color: rgb(5, 49, 5);
+    font-size: 1.3rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+    cursor: pointer;
+}
+
+.text-center{
+    text-align: center;
+}
